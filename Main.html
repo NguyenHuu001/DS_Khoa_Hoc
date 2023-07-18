@@ -10,50 +10,51 @@
     <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
     <!-- <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script> -->
     <link rel="stylesheet" href="Main.css">
+    <link rel="stylesheet" href="fonts/fontawesome-free-6.4.0-web/css/all.min.css">
     <title>Document</title>
 </head>
 
 <body>
     
-    <div class="container-fluid justify-content-between header">
+    <div class="container-fluid justify-content-between header fixed-top shadow ">
         <!-- Header  -->
-        <div class="container d-flex justify-content-between pt-3">
+        <div class="container d-flex justify-content-between pt-3 ">
             <div class="">
                 <img src="img/sv_logo_dashboard.png" alt="LoGo_HuFi">
             </div>
             <div class="d-flex">
-                <div class="header_items p-3">
+                <div class="header_items p-2">
                     <a href="">
                         Trang chủ
                     </a>
                 </div>
-                <div class="header_items p-3">
+                <div class="header_items p-2">
                     <a href="">
                         Về chúng tôi
                     </a>
                 </div>
-                <div class="header_items p-3">
+                <div class="header_items p-2">
                     <a href="">
                         Khóa Học STEM
                     </a>
                 </div>
-                <div class="header_items p-3">
+                <div class="header_items p-2">
                     <a href="">
                         Khóa Học
                     </a>
                 </div>
-                <div class="header_items p-3">
+                <div class="header_items p-2">
                     <a href="">
                         Mentor
                     </a>
                 </div>
-                <div class="header_items p-3">
+                <div class="header_items p-2">
                     <a href="">
                         Blog
                     </a>
                 </div>
             </div>
-            <div class="cart">
+            <div class="cart_img">
                 <img class="" src="img/icon-shopping-cart.jpg" alt="">
             </div>
         </div>
@@ -135,13 +136,68 @@
                     <input class="form-check-input" type="checkbox" value="Online">
                     <p class="text_opacity  mb-0 ps-2">STEM</p>
                 </div>
-                <div class="d-grid gap-1 btn_search mt-4">
-                    <button  type="button">Tìm kiếm</button>
+                <div class="d-grid gap-1 btn_search mt-4 ">
+                    <button class="text-white" type="button">Tìm kiếm</button>
                 </div>
-                
             </div>
-            <div class="col-sm-10 ">
 
+            <div class="col-sm-9 ">
+                <div class="container-fluid">
+                    <div class="header_list d-flex justify-content-between p-2 ">
+                        <div class="count d-flex text-center pt-2">
+                            <h5 class="text-center">33</h5>
+                            <h5 class="ps-1 text-center">Khóa học</h5>
+                        </div>
+                        <div class="">
+                            <select class="form-select pt-2 ps-3 pe-5" >
+                                <option value="">Sắp Xếp Khóa Học</option>
+                                <option value="">Giá Tăng Dần</option>
+                                <option value="">Giá Giảm Dần</option>
+                                <option value="">Số Lượng Người Sử Nhiều</option>
+                                <option value="">Free</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="main_items mt-5">
+                        <div class="row">
+                            <div class="col-sm-4 border shadow">
+                                <div class="cart">
+                                    <img class="cart-img-top" src="img/item_net_core.jpg" alt=".NET">
+                                    <div class="cart-body">
+                                        <h4 class="mt-4 ms-1">.NET Core API</h4>
+                                        <a href="#" class="text-decoration-none d-flex">
+                                            <p class="ms-1 fw-semibold" >Mentor </p>
+                                            <p class="ms-2 fw-semibold">Trần Hữu Hiệp</p>
+                                        </a>
+                                        <div class="d-flex ">
+                                            <i class="fa-solid fa-user mt-1"></i>
+                                            <p class="fw-bolder ms-2 fst-italic">104 Học Viên</p>
+                                        </div>
+                                        <div class="detail visible">
+                                            .NET Core API là một framework được tạo ra bởi Microsoft để xây dựng các
+                                             ứng dụng web API và microservices. Nó được thiết kế để hỗ trợ việc phát triển ứng dụng 
+                                             đa nền tảng, cho phép các nhà phát triển xây dựng ứng dụng trên nhiều nền tảng như 
+                                             Windows, macOS và Linux. Ứng dụng được phát triển bằng .NET Core API có thể hoạt động 
+                                             trên các nền tảng khác nhau một cách dễ dàng và không cần phải thực hiện các thủ tục 
+                                             phức tạp để chỉnh sửa mã nguồn.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="cart">
+                                    <img class="cart-img-top" style="width: 252px; height: 200px;" src="img/item_sw_testing.jpg" alt=".NET">
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="cart">
+                                    <img class="cart-img-top" style="width: 252px; height: 200px;" src="img/item_C_Sap.png" alt=".NET">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

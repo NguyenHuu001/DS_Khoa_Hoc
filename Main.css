@@ -10,21 +10,21 @@
 
 /* <!-- Header  --> */
 .header{
-    position: fixed;
     z-index: 999;
     background-color: #fff;
+    height: 100px;
     top: 0;
     padding: 0;
 }
-.cart{
+.cart_img{
     position: relative;
 }
-.cart > img{
+.cart_img > img{
     width: 84px;
     height: 59px;
 }
 
-.cart::before{
+.cart_img::before{
     position: absolute;
     content: "0";
     color: #fff;
@@ -37,7 +37,7 @@
     border-radius: 50%;
     background-color: var(--color-chudao);
 }
-.cart:hover{
+.cart_img:hover{
     cursor: pointer;
 }
 .header_items > a{
@@ -65,13 +65,7 @@
     align-items: center;
     justify-content: center;
 }
-.nav_content > a:nth-child(2){
-    cursor: default;
-}
-.nav_content > a:nth-child(3){
-    cursor: default;
-}
-.nav_content > a:first-child:hover{
+.nav_content > a:hover{
     color: var(--color-chudao);
     transition: color .4s linear;
 }
@@ -109,7 +103,7 @@
     border-radius: 5px;
     border: 1px solid var(--color-opacity);
     outline: none;
-    width: 250px;
+    width: 260px;
 }
 .sidebar_kg > input:focus{
     outline: 2px solid #0715dc;
@@ -130,7 +124,7 @@
 .select > img{
     position: absolute;
     display: flex;
-    right: 30px;
+    right: 50px;
     top: 0;
     width: 40px;
     height: 40px;
@@ -142,7 +136,17 @@
     border: none;
     border-radius: 5px;
 }
+.btn_search > button:hover{
+    opacity: 0.7;
+    transition: opacity 0.6s linear;
+}
 .btn_search{
     width: 166;
     height: 40px;
+}
+
+
+/* ITEMS  */
+.detail{
+    height: 75px;
 }
