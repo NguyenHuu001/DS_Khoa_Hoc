@@ -1,0 +1,148 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+:root{
+    --color-text: #322225;
+    --color-chudao: #ff630e;
+    --color-opacity: #97939b;
+}
+
+/* <!-- Header  --> */
+.header{
+    position: fixed;
+    z-index: 999;
+    background-color: #fff;
+    top: 0;
+    padding: 0;
+}
+.cart{
+    position: relative;
+}
+.cart > img{
+    width: 84px;
+    height: 59px;
+}
+
+.cart::before{
+    position: absolute;
+    content: "0";
+    color: #fff;
+    display: block;
+    text-align: center;
+    right: 0;
+    top: 8px;
+    width: 19px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: var(--color-chudao);
+}
+.cart:hover{
+    cursor: pointer;
+}
+.header_items > a{
+    text-decoration: none;
+    color: var(--color-text);
+    font-weight: 500;
+}
+.header_items > a:hover{
+    color: chocolate;
+}
+
+/* NAV  */
+
+.nav {
+    width: 100%;
+    height: 250px;
+    position: relative;
+    top: 90px;
+    background-image: url(img/banner-2.jpg);
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.nav_content > a:nth-child(2){
+    cursor: default;
+}
+.nav_content > a:nth-child(3){
+    cursor: default;
+}
+.nav_content > a:first-child:hover{
+    color: var(--color-chudao);
+    transition: color .4s linear;
+}
+.nav::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(59, 49, 83, 0.9);
+}
+
+.nav > h2{
+    color: var(--color-chudao);
+    z-index: 1;
+    margin-bottom: 20px;
+    display: block;
+}
+.nav_content{
+    z-index: 1;
+}
+.nav_content > a{
+    text-decoration: none;  
+    color: #fff;
+    padding: 5px;
+}
+
+
+/* SIDEBAR  */
+
+.sidebar{
+    position: relative;
+    top: 150px;
+}
+.sidebar_kg > input{
+    border-radius: 5px;
+    border: 1px solid var(--color-opacity);
+    outline: none;
+    width: 250px;
+}
+.sidebar_kg > input:focus{
+    outline: 2px solid #0715dc;
+}
+.sidebar_kg > h5{
+    text-transform: uppercase;
+}
+.text_opacity{
+    font-weight: 400;
+    color: var(--color-opacity);
+}
+.select{
+    position: relative;
+}
+.select > .form-check-input{
+    border: 1px solid var(--color-opacity);
+}
+.select > img{
+    position: absolute;
+    display: flex;
+    right: 30px;
+    top: 0;
+    width: 40px;
+    height: 40px;
+}
+
+.btn_search > button{
+    background-color: var(--color-chudao);
+    outline: none;
+    border: none;
+    border-radius: 5px;
+}
+.btn_search{
+    width: 166;
+    height: 40px;
+}
