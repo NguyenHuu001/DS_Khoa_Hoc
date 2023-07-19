@@ -1,30 +1,34 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
-:root{
+
+:root {
     --color-text: #322225;
     --color-chudao: #ff630e;
     --color-opacity: #97939b;
+    --color-footer: #0e0a38;
 }
 
 /* <!-- Header  --> */
-.header{
+.header {
     z-index: 999;
     background-color: #fff;
     height: 100px;
     top: 0;
     padding: 0;
 }
-.cart_img{
+
+.cart_img {
     position: relative;
 }
-.cart_img > img{
+
+.cart_img>img {
     width: 84px;
     height: 59px;
 }
 
-.cart_img::before{
+.cart_img::before {
     position: absolute;
     content: "0";
     color: #fff;
@@ -37,15 +41,18 @@
     border-radius: 50%;
     background-color: var(--color-chudao);
 }
-.cart_img:hover{
+
+.cart_img:hover {
     cursor: pointer;
 }
-.header_items > a{
+
+.header_items>a {
     text-decoration: none;
     color: var(--color-text);
     font-weight: 500;
 }
-.header_items > a:hover{
+
+.header_items>a:hover {
     color: chocolate;
 }
 
@@ -65,11 +72,13 @@
     align-items: center;
     justify-content: center;
 }
-.nav_content > a:hover{
+
+.nav_content>a:hover {
     color: var(--color-chudao);
     transition: color .4s linear;
 }
-.nav::before{
+
+.nav::before {
     content: "";
     position: absolute;
     width: 100%;
@@ -77,17 +86,19 @@
     background-color: rgba(59, 49, 83, 0.9);
 }
 
-.nav > h2{
+.nav>h2 {
     color: var(--color-chudao);
     z-index: 1;
     margin-bottom: 20px;
     display: block;
 }
-.nav_content{
+
+.nav_content {
     z-index: 1;
 }
-.nav_content > a{
-    text-decoration: none;  
+
+.nav_content>a {
+    text-decoration: none;
     color: #fff;
     padding: 5px;
 }
@@ -95,33 +106,40 @@
 
 /* SIDEBAR  */
 
-.sidebar{
+.sidebar {
     position: relative;
     top: 150px;
 }
-.sidebar_kg > input{
+
+.sidebar_kg>input {
     border-radius: 5px;
     border: 1px solid var(--color-opacity);
     outline: none;
     width: 260px;
 }
-.sidebar_kg > input:focus{
+
+.sidebar_kg>input:focus {
     outline: 2px solid #0715dc;
 }
-.sidebar_kg > h5{
+
+.sidebar_kg>h5 {
     text-transform: uppercase;
 }
-.text_opacity{
+
+.text_opacity {
     font-weight: 400;
     color: var(--color-opacity);
 }
-.select{
+
+.select {
     position: relative;
 }
-.select > .form-check-input{
+
+.select>.form-check-input {
     border: 1px solid var(--color-opacity);
 }
-.select > img{
+
+.select>img {
     position: absolute;
     display: flex;
     right: 50px;
@@ -130,23 +148,106 @@
     height: 40px;
 }
 
-.btn_search > button{
+.btn_search>button {
     background-color: var(--color-chudao);
     outline: none;
     border: none;
     border-radius: 5px;
 }
-.btn_search > button:hover{
+
+.btn_search>button:hover {
     opacity: 0.7;
     transition: opacity 0.6s linear;
 }
-.btn_search{
+
+.btn_search {
     width: 166;
     height: 40px;
 }
 
 
 /* ITEMS  */
-.detail{
-    height: 75px;
+.detail {
+    /* overflow-hidden: giúp ẩn đi nội dung tràn ra ngoài khung của phần tử.
+    -webkit-line-clamp: giới hạn số dòng hiển thị của phần tử.
+    -webkit-box-orient: chỉ định hướng của box mà phần tử hiển thị.
+    display: -webkit-box;: chỉ định kiểu hiển thị của phần tử. */
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+.rated > i{
+    color: var(--color-chudao);
+}
+.price{
+    color: var(--color-chudao);
+    font-size: 18px;
+}
+.button-ct{
+    background-color: var(--color-chudao);
+    font-weight: 700;
+    text-align: center;
+    color: #fff;
+    box-sizing: border-box;
+    border: 2px solid;
+}
+.button-ct:hover{
+    background-color: #fff;
+    box-sizing: border-box;
+    color: var(--color-chudao);
+    border-color: var(--color-chudao);
+    transition: all 0.2s linear;
+}
+.cart_title{
+    height: 60px;
+}
+.cart-body_cusor{
+    position: relative;
+}
+.title_h4:hover{
+    cursor: pointer;
+    color: var(--color-chudao);
+    transition: color 0.2s linear;
+}
+.cart-body_cusor > img{
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    top: -50px;
+    right: 0;
+}
+.name_GV > p:first-child{
+    color: var(--color-opacity);
+}
+.name_GV > p:last-child{
+    color: var(--color-chudao);
+}
+
+/* <!-- --------------Thanh Trang------------ --> */
+
+.wrap_page > .page{
+    margin-left: 20px;
+    margin-top: 20px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.wrap_page > .page:first-child{
+    background-color: var(--color-chudao);
+    color: #fff;
+}
+.wrap_page > .page:hover{
+    cursor: pointer;
+    background-color: var(--color-chudao);
+    color: #fff;
+    transition: background-color 0.4s linear ;
+}
+/* <!-- -------------FOOTER----------- --> */
+.footer{
+    background-color: var(--color-footer);
+    position: relative;
+    top: 200px;
 }
