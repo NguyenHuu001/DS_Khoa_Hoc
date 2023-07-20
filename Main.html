@@ -15,43 +15,84 @@
 </head>
 
 <body>
-
+    <div class="coating">
+        <div class="sidebar_content">
+            <div class="sidebar_top d-flex justify-content-between align-items-center">
+                <img src="img/icon-logo-mobile.png" alt="">
+                <i class="fa-solid fa-xmark"></i>
+            </div>
+            <div class="sidebar_cart">
+                <a href="#" style="text-decoration: none;">
+                    <img src="img/icon-shopping-cart.jpg" alt="">
+                    <span></span>
+                </a>
+            </div>
+            <div class="sidebar_menu ">
+                <ul>
+                    <li class="text-uppercase pt-3 fw-bolder">Trang chủ</li>
+                    <li class="text-uppercase pt-3 position-relative fw-bolder ">
+                        <div class="d-flex justify-content-between">
+                            <p class="mb-0 ">Về chúng tôi</p>
+                            <div class="wrap_sign">
+                                <i class="fa-solid fa-plus mt-1 menu_plus"></i>
+                                <i class="fa-solid fa-minus mt-1 menu_minus"></i>
+                            </div>
+                        </div>
+                        <ul class="ps-4 ul_down" style="list-style: none;">
+                            <li class="text-uppercase pt-3">Câu chuyện founder</li>
+                            <li class="text-uppercase pt-3">Nền tảng lms</li>
+                        </ul>
+                    </li>
+                    <li class="text-uppercase pt-3 fw-bolder">Khóa học stem</li>
+                    <li class="text-uppercase pt-3 fw-bolder">Khóa học</li>
+                    <li class="text-uppercase pt-3 fw-bolder">mentor</li>
+                    <li class="text-uppercase pt-3 fw-bolder">blog</li>
+                </ul>
+            </div>
+            <div class="input_text">
+                <input class="rounded p-2" type="text" placeholder="Tìm kiếm khóa học">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+        </div>
+    </div>
     <div class="container-fluid justify-content-between header fixed-top shadow ">
         <!-- Header  -->
-        <div class="container d-flex justify-content-between pt-3 ">
+        <div class="container d-flex justify-content-between pt-3 col-xs-12">
             <div class="">
                 <img src="img/sv_logo_dashboard.png" alt="LoGo_HuFi">
             </div>
-            <div class="d-flex">
-                <div class="header_items p-2">
-                    <a class="fw-bold" href="">
-                        Trang chủ
-                    </a>
-                </div>
-                <div class="header_items p-2">
-                    <a class="fw-bold" href="">
-                        Về chúng tôi
-                    </a>
-                </div>
-                <div class="header_items p-2">
-                    <a class="fw-bold" href="">
-                        Khóa Học STEM
-                    </a>
-                </div>
-                <div class="header_items p-2">
-                    <a class="fw-bold" href="">
-                        Khóa Học
-                    </a>
-                </div>
-                <div class="header_items p-2">
-                    <a class="fw-bold" href="">
-                        Mentor
-                    </a>
-                </div>
-                <div class="header_items p-2">
-                    <a class="fw-bold" href="">
-                        Blog
-                    </a>
+            <div class="none">
+                <div class="d-flex">
+                    <div class="header_items p-2">
+                        <a class="fw-bold" href="">
+                            Trang chủ
+                        </a>
+                    </div>
+                    <div class="header_items p-2">
+                        <a class="fw-bold" href="">
+                            Về chúng tôi
+                        </a>
+                    </div>
+                    <div class="header_items p-2">
+                        <a class="fw-bold" href="">
+                            Khóa Học STEM
+                        </a>
+                    </div>
+                    <div class="header_items p-2">
+                        <a class="fw-bold" href="">
+                            Khóa Học
+                        </a>
+                    </div>
+                    <div class="header_items p-2">
+                        <a class="fw-bold" href="">
+                            Mentor
+                        </a>
+                    </div>
+                    <div class="header_items p-2">
+                        <a class="fw-bold" href="">
+                            Blog
+                        </a>
+                    </div>
                 </div>
             </div>
             <div class="cart_img">
@@ -60,7 +101,7 @@
         </div>
     </div>
     <!-- NAV  -->
-    <div class="container-fluid p-0 nav ">
+    <div class="container-fluid p-0 nav col-xs-12 ">
         <h2>Danh sách khóa học</h2>
         <div class="nav_content">
             <a href="#">Trang chủ</a>
@@ -71,12 +112,18 @@
     <!-- SIDEBAR  -->
     <div class="container sidebar">
         <div class="row">
-            <div class="col-sm-3 sidebar_kg">
+            <div class="col-sm-3 col-md-4 col-lg-3 col-xs-3 sidebar_kg" id="form_1">
                 <h5 class="m-0">Khoảng giá</h5>
                 <p class="text_opacity  mb-1">Từ giá</p>
-                <input class="p-1" type="text" value="0 VNĐ">
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control input_from p-1" placeholder="0">
+                    <span class="input-group-text">VNĐ</span>
+                </div>
                 <p class="text_opacity  mb-1">Đến giá</p>
-                <input class="p-1" type="text" value="10.000.000 VNĐ">
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control input_arrive p-1" placeholder="10.000.000" />
+                    <span class="input-group-text">VNĐ</span>
+                </div>
                 <p class="Notification text_opacity  mb-1">Thông báo</p>
 
                 <h5>Hình thức học</h5>
@@ -141,11 +188,11 @@
                 </div>
             </div>
 
-            <div class="col-sm-9 p-0 ">
+            <div class="top_list col-sm-9 col-md-8 col-lg-9 col-xs-12 p-0 ">
                 <div class="container-fluid p-0">
                     <div class="header_list d-flex justify-content-between p-2 ">
                         <div class="count d-flex text-center pt-2">
-                            <h5 class="text-center">33</h5>
+                            <h5 class="text-center soluonggg">33</h5>
                             <h5 class="ps-1 text-center">Khóa học</h5>
                         </div>
                         <div class="">
@@ -162,7 +209,8 @@
                     <div class="main_items mt-5">
                         <!-- -------ROW ONE---------- -->
                         <div class="row d-flex justify-content-between mb-3">
-                            <div class="col-sm-4">
+                            <!-- ITEM ONE -->
+                            <div class="item_count col-sm-4 col-md-12 col-lg-4">
                                 <div class="cart border shadow">
                                     <img class="cart-img-top rounded-top" style="width: 100%; height: 200px;"
                                         src="img/item_net_core.jpg" alt=".NET">
@@ -211,7 +259,8 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-sm-4">
+                            <!-- ITEM TWO -->
+                            <div class="item_count col-sm-4 col-md-12 col-lg-4">
                                 <div class="cart border shadow">
                                     <img class="cart-img-top rounded-top" style="width: 100%; height: 200px;"
                                         src="img/item_sw_testing.jpg" alt=".NET">
@@ -257,7 +306,8 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-sm-4">
+                            <!-- ITEM THREE -->
+                            <div class="item_count col-sm-4 col-md-12 col-lg-4">
                                 <div class="cart border shadow border-grey">
                                     <img class="cart-img-top rounded-top" style="width: 100%; height: 200px;"
                                         src="img/item_C_Sap.png" alt=".NET">
@@ -304,9 +354,10 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- -------ROW TWO------ -->
+                        <!-- ROW TWO  -->
                         <div class="row d-flex justify-content-between mb-3">
-                            <div class="col-sm-4">
+                            <!-- -------ITEM FOUR------ -->
+                            <div class="item_count col-sm-4 col-md-12 col-lg-4">
                                 <div class="cart border shadow">
                                     <img class="cart-img-top rounded-top" style="width: 100%; height: 200px;"
                                         src="img/item_net_core.jpg" alt=".NET">
@@ -355,7 +406,8 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-sm-4">
+                            <!-- -------ITEM FIVE------ -->
+                            <div class="item_count col-sm-4 col-md-12 col-lg-4">
                                 <div class="cart border shadow">
                                     <img class="cart-img-top rounded-top" style="width: 100%; height: 200px;"
                                         src="img/item_sw_testing.jpg" alt=".NET">
@@ -401,7 +453,8 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-sm-4">
+                            <!-- -------ITEM SIX------ -->
+                            <div class="item_count col-sm-4 col-md-12 col-lg-4">
                                 <div class="cart border shadow border-grey">
                                     <img class="cart-img-top rounded-top" style="width: 100%; height: 200px;"
                                         src="img/item_C_Sap.png" alt=".NET">
@@ -450,7 +503,8 @@
                         </div>
                         <!-- ----ROW THREE---------- -->
                         <div class="row d-flex justify-content-between mb-3">
-                            <div class="col-sm-4">
+                            <!-- -------ITEM TEN------ -->
+                            <div class="item_count col-sm-4 col-md-12 col-lg-4">
                                 <div class="cart border shadow">
                                     <img class="cart-img-top rounded-top" style="width: 100%; height: 200px;"
                                         src="img/item_net_core.jpg" alt=".NET">
@@ -499,7 +553,8 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-sm-4">
+                            <!-- -------ITEM SEVEN------ -->
+                            <div class="item_count col-sm-4 col-md-12 col-lg-4">
                                 <div class="cart border shadow">
                                     <img class="cart-img-top rounded-top" style="width: 100%; height: 200px;"
                                         src="img/item_sw_testing.jpg" alt=".NET">
@@ -545,7 +600,8 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-sm-4">
+                            <!-- -------ITEM Nice------ -->
+                            <div class="item_count col-sm-4 col-md-12 col-lg-4">
                                 <div class="cart border shadow border-grey">
                                     <img class="cart-img-top rounded-top" style="width: 100%; height: 200px;"
                                         src="img/item_C_Sap.png" alt=".NET">
@@ -612,46 +668,104 @@
     <div class="footer">
         <div class="container-fluid">
             <div class="footer_wrap">
-                <div class="row">
-                    <div class="col-sm-4 mt-5 ms-5">
-                        <img class="mb-5 ms-5" src="img/sv_logo_dashboard.png" alt="">
-                        <p class="text-white mb-5 ms-5">Chúng tôi cung cấp các khoá học chất lượng cao để 
-                            cải thiện các kỹ năng lập trình của bạn. Tất cả các mentor của chúng 
-                            tôi đều có nhiều kinh nghiệm trong thực tế và giảng dạy.
-                        </p>
-                        <h5 class="text-white mb-2 ms-5">Theo dõi chúng tôi tại:</h5>
-                        <div class="wrap_icon mb-5 ms-5">
-                            <a class="me-2" href="#"><i class="fa-brands fa-facebook" style="color: #eff0f0;"></i></a>
-                            <a class="me-2" href=""><i class="fa-brands fa-square-instagram" style="color: #fcfcfd;"></i></a>
-                            <a class="me-2" href="#"><i class="fa-brands fa-youtube" style="color: #fcfcfc;"></i></a>
+                <div class="container ">
+                    <div class="row d-flex justify-content-between">
+                        <div class="col-sm-5 col-xs-12 col-lg-3 mt-5 p-0 ps-3">
+                            <img class="mb-5 " src="img/sv_logo_dashboard.png" alt="">
+                            <p class="text-white mb-5 text-wrap">Chúng tôi cung cấp các khoá học chất lượng cao để
+                                cải thiện các kỹ năng lập trình của bạn. Tất cả các mentor của chúng
+                                tôi đều có nhiều kinh nghiệm trong thực tế và giảng dạy.
+                            </p>
+                            <h5 class="text-white mb-2">Theo dõi chúng tôi tại:</h5>
+                            <div class="wrap_icon mb-5 ">
+                                <a class="me-2" href="#"><i class="fa-brands fa-facebook"
+                                        style="color: #eff0f0;"></i></a>
+                                <a class="me-2" href=""><i class="fa-brands fa-square-instagram"
+                                        style="color: #fcfcfd;"></i></a>
+                                <a class="me-2" href="#"><i class="fa-brands fa-youtube"
+                                        style="color: #fcfcfc;"></i></a>
+                            </div>
+                        </div>
+                        <div class="col-sm-2 col-xs-5 col-lg-2 mt-5 p-0 ps-3">
+                            <h5 class="title_h5 ">Menu</h5>
+                            <ul class="ps-0 mt-3 fw-normal " style="list-style: none;">
+                                <a class="text-decoration-none text-white" href="#">
+                                    <li class="mt-2">Trang chủ</li>
+                                </a>
+                                <a class="text-decoration-none text-white" href="#">
+                                    <li class="mt-2">Về chúng tôi</li>
+                                </a>
+                                <a class="text-decoration-none text-white" href="#">
+                                    <li class="mt-2">Nền tảng LMS</li>
+                                </a>
+                                <a class="text-decoration-none text-white" href="#">
+                                    <li class="mt-2">Khóa học STEM</li>
+                                </a>
+                                <a class="text-decoration-none text-white" href="#">
+                                    <li class="mt-2">Khóa học</li>
+                                </a>
+                                <a class="text-decoration-none text-white" href="#">
+                                    <li class="mt-2">Mentor</li>
+                                </a>
+                                <a class="text-decoration-none text-white" href="#">
+                                    <li class="mt-2">Blog</li>
+                                </a>
+                            </ul>
+                        </div>
+                        <div class="col-sm-2 col-xs-2 mt-5 col-lg-2 ms-0 p-0 ps-3">
+                            <h5 class="title_h5 ">Điều khoản</h5>
+                            <ul class="ps-0 mt-3 fw-normal" style="list-style: none;">
+                                <a class="text-decoration-none text-white" href="#">
+                                    <li class="mt-2">Chính sách bảo mật</li>
+                                </a>
+                                <a class="text-decoration-none text-white" href="#">
+                                    <li class="mt-2">Điều khoản dịch vụ</li>
+                                </a>
+                            </ul>
+                            <h5 class="title_h5  mt-5">Cộng tác viên</h5>
+                            <ul class="ps-0 mt-3 fw-normal " style="list-style: none;">
+                                <a class="text-decoration-none text-white" href="#">
+                                    <li class="mt-2">Đăng ký Cộng tác viên</li>
+                                </a>
+                                <a class="text-decoration-none text-white" href="#">
+                                    <li class="mt-2">Đăng ký Mentor</li>
+                                </a>
+                            </ul>
+                        </div>
+                        <div class="col-sm-4 col-xs-3 mt-5 col-lg-4 p-0 ps-3">
+                            <h5 class="title_h5">Liên hệ với chúng tôi</h5>
+                            <div class="text-white d-flex ">
+                                <i class="icon_info fa-solid fa-location-dot mt-1"></i>
+                                <p class="fw-normal ms-2">Tân Phú, TP.HCM</p>
+                            </div>
+                            <div class="text-white d-flex ">
+                                <i class="icon_info fa-solid fa-envelope mt-2"></i>
+                                <p class="fw-normal ms-2">nguyenduchuu2k2@gmail.com</p>
+                            </div>
+                            <div class="text-white d-flex ">
+                                <i class="icon_info fa-solid fa-phone-volume mt-1 "></i>
+                                <p class="fw-normal ms-2">09999........</p>
+                            </div>
+
                         </div>
                     </div>
-                    <div class="col-sm-2 mt-5 ms-5" >
-                        <h5 class="title_h5 text-white">Menu</h5>
-                        <ul class="ps-0 mt-3 fw-normal " style="list-style: none;">
-                            <a class="text-decoration-none text-white" href="#"><li class="mt-2">Trang chủ</li></a>
-                            <a class="text-decoration-none text-white" href="#"><li class="mt-2">Về chúng tôi</li></a>
-                            <a class="text-decoration-none text-white" href="#"><li class="mt-2">Nền tảng LMS</li></a>
-                            <a class="text-decoration-none text-white" href="#"><li class="mt-2">Khóa học STEM</li></a>
-                            <a class="text-decoration-none text-white" href="#"><li class="mt-2">Khóa học</li></a>
-                            <a class="text-decoration-none text-white" href="#"><li class="mt-2">Mentor</li></a>
-                            <a class="text-decoration-none text-white" href="#"><li class="mt-2">Blog</li></a>
-                        </ul>
-                    </div>
-                    <div class="col-sm-2 mt-5 ms-5 ">
-                        <h5 class="title_h5 text-white">Điều khoản</h5>
-                        <ul class="ps-0 mt-3 fw-normal" style="list-style: none;">
-                            <a class="text-decoration-none text-white" href="#"><li class="mt-2">Chính sách bảo mật</li></a>
-                            <a class="text-decoration-none text-white" href="#"><li class="mt-2">Điều khoản dịch vụ</li></a>
-                        </ul>
-                        <h5 class="title_h5 text-white">Cộng tác viên</h5>
-                    </div>
-                    <div class="col-sm-4 mt-5 ms-5"></div>
                 </div>
             </div>
         </div>
     </div>
 
+    <script src="Main.js"></script>
+    <script>
+        Validator({
+            form: 'form_1',
+            rules: [
+                Validator.checkNumber_from('.input_from'),
+                Validator.checkNumber_arrive('.input_arrive'),
+            ]
+        })
+
+        Count('.item_count')
+    </script>
 </body>
 
 </html>
