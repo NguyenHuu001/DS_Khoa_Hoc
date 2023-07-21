@@ -387,6 +387,12 @@ body {
         display: block;
     }
 
+    .icon_none > i{
+        display: inline-block;
+    }
+}
+
+@media screen and (max-width: 570px) {
     #HT_Hoc {
         display: none;
     }
@@ -402,8 +408,5 @@ body {
     #Khoang_gia{
         display: none;
     }
-
-    .icon_none > i{
-        display: inline-block;
-    }
 }
+
