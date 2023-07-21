@@ -16,7 +16,6 @@
     background-color: #fff;
     height: 100px;
     top: 0;
-    padding: 0;
 }
 
 .cart_img {
@@ -54,6 +53,10 @@
 
 .header_items>a:hover {
     color: chocolate;
+}
+
+#bars {
+    display: none;
 }
 
 /* NAV  */
@@ -110,7 +113,9 @@
     position: relative;
     top: 150px;
 }
-
+.icon_none > i{
+    display: none;
+}
 .sidebar_kg>input {
     border-radius: 5px;
     border: 1px solid var(--color-opacity);
@@ -278,13 +283,13 @@ body {
     position: relative;
 }
 
-.coating {
+#coating {
     position: absolute;
     display: none;
-    width: 100%;
+    width: 0%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
-    z-index: 9999;
+    z-index: 999;
 }
 
 .sidebar_content {
@@ -307,14 +312,16 @@ body {
     height: 16px;
 }
 
-.sidebar_cart > a > img {
+.sidebar_cart>a>img {
     width: 100px;
     height: 70px;
 }
-.sidebar > a{
+
+.sidebar>a {
     position: relative;
 }
-.sidebar_cart > a > span {
+
+.sidebar_cart>a>span {
     position: absolute;
     background-color: var(--color-chudao);
     width: 20px;
@@ -324,34 +331,42 @@ body {
     left: 110px;
     top: 130px;
 }
-.sidebar_menu > ul{
+
+.sidebar_menu>ul {
     list-style: none;
     padding: 0;
 }
-.wrap_sign{
+
+.wrap_sign {
     position: absolute;
     right: 20px;
 }
-.menu_plus{
+
+.menu_plus {
     position: absolute;
     /* visibility: hidden; */
 }
-.menu_minus{
+
+.menu_minus {
     position: absolute;
     z-index: 1;
 }
-.ul_down{
+
+.ul_down {
     display: none;
 }
-.input_text{
+
+.input_text {
     position: relative;
 }
-.input_text > input {
+
+.input_text>input {
     outline: none;
     border: 1px solid var(--color-opacity);
     width: 100%;
 }
-.input_text > i{
+
+.input_text>i {
     position: absolute;
     right: 10px;
     top: 13px;
@@ -368,8 +383,27 @@ body {
         display: none;
     }
 
-    /* .coating {
+    #bars {
         display: block;
-    } */
-    
+    }
+
+    #HT_Hoc {
+        display: none;
+    }
+
+    #Trinh_Do {
+        display: none;
+    }
+
+    #Linh_Vuc {
+        display: none;
+    }
+
+    #Khoang_gia{
+        display: none;
+    }
+
+    .icon_none > i{
+        display: inline-block;
+    }
 }

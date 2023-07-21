@@ -78,6 +78,81 @@ Validator.checkNumber_arrive = (selector) => {
 
 Count = (count) => {
     var count = document.getElementsByClassName("item_count").length;
-    let  soLuong = document.querySelector('.soluonggg')
+    let soLuong = document.querySelector('.soluonggg')
     soLuong.innerHTML = count
+}
+
+Open_Close = () => {
+    // $(document).ready(function(){
+    //     $('#bars').click(function() {
+    //         $('.coating').slideToggle()
+    //     })
+    // })
+
+    var iconBar = document.getElementById('bars')
+    var coating = document.getElementById('coating')
+    var close_coating = document.getElementById('close_coating')
+    iconBar.onclick = function () {
+        coating.style.display = 'block'
+        coating.style.width = '100%'
+    }
+    close_coating.onclick = function () {
+        coating.style.display = 'none'
+        coating.style.transition = 'all 10s linear';
+    }
+    // coating.onclick = function () {
+    //     coating.style.display = 'none'
+    //     coating.style.transition = 'all 10s linear';
+    // }
+}
+
+Open_Close_SideBar = () => {
+    var width = window.innerWidth;
+    if (width < 570) {
+        var priceRange = document.getElementById('Khoang_gia')
+        var studyForm = document.getElementById('HT_Hoc')
+        var level = document.getElementById('Trinh_Do')
+        var field = document.getElementById('Linh_Vuc')
+        var clickPR = document.getElementById('onclick_block_one')
+        var clickSF = document.getElementById('onclick_block_two')
+        var clickLevel = document.getElementById('onclick_block_three')
+        var clickField = document.getElementById('onclick_block_four')
+        clickPR.onclick = function () {
+            if (priceRange.style.display == 'none') {
+                priceRange.style.display = 'block'
+            } else {
+                priceRange.style.display = 'none'
+            }
+        }
+
+        clickSF.onclick = function () {
+            if (studyForm.style.display === 'none') {
+                studyForm.style.display = 'block'
+            } else {
+                studyForm.style.display = 'none'
+            }
+        }
+
+        clickLevel.onclick = function () {
+            if (level.style.display === 'none') {
+                level.style.display = 'block'
+            }
+            else {
+                level.style.display = 'none'
+            }
+        }
+
+        clickField.onclick = function () {
+            if (field.style.display === 'none') {
+                field.style.display = 'block'
+            } else {
+                field.style.display = 'none'
+            }
+        }
+    }
+
+
+
+
+
 }

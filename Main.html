@@ -11,15 +11,17 @@
     <!-- <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script> -->
     <link rel="stylesheet" href="Main.css">
     <link rel="stylesheet" href="fonts/fontawesome-free-6.4.0-web/css/all.min.css">
-    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+    <link rel="icon" type="image/png" sizes="96x96" href="img/BSmart.png">
+    <title>Bán Hàng Siêu Cấp VIP PRO</title>
 </head>
 
 <body>
-    <div class="coating">
+    <div id="coating">
         <div class="sidebar_content">
             <div class="sidebar_top d-flex justify-content-between align-items-center">
                 <img src="img/icon-logo-mobile.png" alt="">
-                <i class="fa-solid fa-xmark"></i>
+                <i id="close_coating" class="fa-solid fa-xmark"></i>
             </div>
             <div class="sidebar_cart">
                 <a href="#" style="text-decoration: none;">
@@ -98,6 +100,7 @@
             <div class="cart_img">
                 <img class="" src="img/icon-shopping-cart.jpg" alt="">
             </div>
+            <div id="bars" class="mt-4"><i class="fa-solid fa-bars"></i></div>
         </div>
     </div>
     <!-- NAV  -->
@@ -113,75 +116,95 @@
     <div class="container sidebar">
         <div class="row">
             <div class="col-sm-3 col-md-4 col-lg-3 col-xs-3 sidebar_kg" id="form_1">
-                <h5 class="m-0">Khoảng giá</h5>
-                <p class="text_opacity  mb-1">Từ giá</p>
-                <div class="input-group mb-3">
-                    <input type="text" class="form-control input_from p-1" placeholder="0">
-                    <span class="input-group-text">VNĐ</span>
-                </div>
-                <p class="text_opacity  mb-1">Đến giá</p>
-                <div class="input-group mb-3">
-                    <input type="text" class="form-control input_arrive p-1" placeholder="10.000.000" />
-                    <span class="input-group-text">VNĐ</span>
-                </div>
-                <p class="Notification text_opacity  mb-1">Thông báo</p>
-
-                <h5>Hình thức học</h5>
-                <div class="select d-flex align-content-center">
-                    <input class="form-check-input" type="checkbox" value="Online">
-                    <p class="text_opacity  mb-0 ps-2">Online</p>
-                </div>
-                <div class="select d-flex align-content-center">
-                    <input class="form-check-input" type="checkbox" value="Offline">
-                    <p class="text_opacity  mb-0 ps-2">Offline</p>
+                <h5 id="onclick_block_one" class="icon_none" >
+                    <i class="fa-solid fa-arrow-down"></i>
+                    Khoảng giá
+                </h5>
+                <div id="Khoang_gia">
+                    <p class="text_opacity  mb-1">Từ giá</p>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control input_from p-1" placeholder="0">
+                        <span class="input-group-text">VNĐ</span>
+                    </div>
+                    <p class="text_opacity  mb-1">Đến giá</p>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control input_arrive p-1" placeholder="10.000.000" />
+                        <span class="input-group-text">VNĐ</span>
+                    </div>
+                    <p class="Notification text_opacity  mb-1"></p>
                 </div>
 
-                <h5>Trình độ</h5>
-                <div class="select d-flex align-content-center pb-2 pt-2 ">
-                    <input class="form-check-input" type="checkbox" value="1">
-                    <p class="text_opacity  mb-0 ps-2">Dễ</p>
-                    <img src="img/icon-title-course.png" alt="">
-                </div>
-                <div class="select d-flex align-content-center pb-2 pt-2 ">
-                    <input class="form-check-input" type="checkbox" value="2">
-                    <p class="text_opacity  mb-0 ps-2">Trung bình</p>
-                    <img src="img/icon-title-course-2.png" alt="">
-                </div>
-                <div class="select d-flex align-content-center pb-2 pt-2 ">
-                    <input class="form-check-input" type="checkbox" value="3">
-                    <p class="text_opacity  mb-0 ps-2">Khó</p>
-                    <img src="img/icon-title-course-3.png" alt="">
-                </div>
-                <div class="select d-flex align-content-center pb-2 pt-2">
-                    <input class="form-check-input" type="checkbox" value="4">
-                    <p class="text_opacity  mb-0 ps-2">Cực khó</p>
-                    <img src="img/icon-title-course-4.png" alt="">
+                <h5 id="onclick_block_two" class="icon_none" >
+                    <i class="fa-solid fa-arrow-down"></i>
+                    Hình thức học
+                </h5>
+                <div id="HT_Hoc">
+                    <div class="select d-flex align-content-center">
+                        <input class="form-check-input" type="checkbox" value="Online">
+                        <p class="text_opacity  mb-0 ps-2">Online</p>
+                    </div>
+                    <div class="select d-flex align-content-center">
+                        <input class="form-check-input" type="checkbox" value="Offline">
+                        <p class="text_opacity  mb-2 ps-2">Offline</p>
+                    </div>
                 </div>
 
-                <h5>Lĩnh Vực</h5>
-                <div class="select d-flex align-content-center">
-                    <input class="form-check-input" type="checkbox" value="Online">
-                    <p class="text_opacity  mb-0 ps-2">Back End</p>
+                <h5 id="onclick_block_three" class="icon_none" >
+                    <i class="fa-solid fa-arrow-down"></i>
+                    Trình độ
+                </h5>
+                <div id="Trinh_Do">
+                    <div class="select d-flex align-content-center pb-2 pt-2 ">
+                        <input class="form-check-input" type="checkbox" value="1">
+                        <p class="text_opacity  mb-0 ps-2">Dễ</p>
+                        <img src="img/icon-title-course.png" alt="">
+                    </div>
+                    <div class="select d-flex align-content-center pb-2 pt-2 ">
+                        <input class="form-check-input" type="checkbox" value="2">
+                        <p class="text_opacity  mb-0 ps-2">Trung bình</p>
+                        <img src="img/icon-title-course-2.png" alt="">
+                    </div>
+                    <div class="select d-flex align-content-center pb-2 pt-2 ">
+                        <input class="form-check-input" type="checkbox" value="3">
+                        <p class="text_opacity  mb-0 ps-2">Khó</p>
+                        <img src="img/icon-title-course-3.png" alt="">
+                    </div>
+                    <div class="select d-flex align-content-center pb-2 pt-2">
+                        <input class="form-check-input" type="checkbox" value="4">
+                        <p class="text_opacity  mb-0 ps-2">Cực khó</p>
+                        <img src="img/icon-title-course-4.png" alt="">
+                    </div>
                 </div>
-                <div class="select d-flex align-content-center">
-                    <input class="form-check-input" type="checkbox" value="Online">
-                    <p class="text_opacity  mb-0 ps-2">Front End</p>
-                </div>
-                <div class="select d-flex align-content-center">
-                    <input class="form-check-input" type="checkbox" value="Online">
-                    <p class="text_opacity  mb-0 ps-2">Database</p>
-                </div>
-                <div class="select d-flex align-content-center">
-                    <input class="form-check-input" type="checkbox" value="Online">
-                    <p class="text_opacity  mb-0 ps-2">Cấp tốc</p>
-                </div>
-                <div class="select d-flex align-content-center">
-                    <input class="form-check-input" type="checkbox" value="Online">
-                    <p class="text_opacity  mb-0 ps-2">Other</p>
-                </div>
-                <div class="select d-flex align-content-center">
-                    <input class="form-check-input" type="checkbox" value="Online">
-                    <p class="text_opacity  mb-0 ps-2">STEM</p>
+
+                <h5 id="onclick_block_four" class="icon_none" >
+                    <i class="fa-solid fa-arrow-down"></i>
+                    Lĩnh Vực
+                </h5>
+                <div id="Linh_Vuc">
+                    <div class="select d-flex align-content-center">
+                        <input class="form-check-input" type="checkbox" value="Online">
+                        <p class="text_opacity  mb-0 ps-2">Back End</p>
+                    </div>
+                    <div class="select d-flex align-content-center">
+                        <input class="form-check-input" type="checkbox" value="Online">
+                        <p class="text_opacity  mb-0 ps-2">Front End</p>
+                    </div>
+                    <div class="select d-flex align-content-center">
+                        <input class="form-check-input" type="checkbox" value="Online">
+                        <p class="text_opacity  mb-0 ps-2">Database</p>
+                    </div>
+                    <div class="select d-flex align-content-center">
+                        <input class="form-check-input" type="checkbox" value="Online">
+                        <p class="text_opacity  mb-0 ps-2">Cấp tốc</p>
+                    </div>
+                    <div class="select d-flex align-content-center">
+                        <input class="form-check-input" type="checkbox" value="Online">
+                        <p class="text_opacity  mb-0 ps-2">Other</p>
+                    </div>
+                    <div class="select d-flex align-content-center">
+                        <input class="form-check-input" type="checkbox" value="Online">
+                        <p class="text_opacity  mb-0 ps-2">STEM</p>
+                    </div>
                 </div>
                 <div class="d-grid gap-1 btn_search mt-4 ">
                     <button class="text-white" type="button">Tìm kiếm</button>
@@ -764,7 +787,9 @@
             ]
         })
 
-        Count('.item_count')
+        Count('.item_count');
+        Open_Close();
+        Open_Close_SideBar();
     </script>
 </body>
 
